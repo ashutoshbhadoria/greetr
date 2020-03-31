@@ -85,9 +85,9 @@
 
       var message;
       if (formal) {
-        message = this.formalGreeting();
+        message = this.formalGreet();
       } else {
-        message = this.greeting();
+        message = this.casualGreet();
       }
 
       $(selector).html(message);
@@ -99,11 +99,11 @@
   // Actual constructor function
   Greetr.init = function(firstName, lastName, language) {
     var self = this;
-    this.firstName = firstName || '';
-    this.lastName = lastName || '';
-    this.language = language || 'en';
+    self.firstName = firstName || '';
+    self.lastName = lastName || '';
+    self.language = language || 'en';
 
-    this.validate();
+    self.validate();
   };
 
   // All the Greetr objects are actually created by the Greeter.init function.
